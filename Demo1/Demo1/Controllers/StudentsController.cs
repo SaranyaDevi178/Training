@@ -9,6 +9,7 @@ namespace Demo1.Controllers
     {
         public static  List<Students> stud = new List<Students>();
 
+
         [HttpPost]
         public IActionResult PostStudrecord(int id,string name, string department)
         {

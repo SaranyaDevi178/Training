@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\cogdotnet1688\\source\\repos\\Demo1\\Demo1\\Demo1.csproj": {}
+    "D:\\Training\\Demo1\\Demo1\\Demo1.csproj": {}
   },
   "projects": {
-    "C:\\Users\\cogdotnet1688\\source\\repos\\Demo1\\Demo1\\Demo1.csproj": {
+    "D:\\Training\\Demo1\\Demo1\\Demo1.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\cogdotnet1688\\source\\repos\\Demo1\\Demo1\\Demo1.csproj",
+        "projectUniqueName": "D:\\Training\\Demo1\\Demo1\\Demo1.csproj",
         "projectName": "Demo1",
-        "projectPath": "C:\\Users\\cogdotnet1688\\source\\repos\\Demo1\\Demo1\\Demo1.csproj",
+        "projectPath": "D:\\Training\\Demo1\\Demo1\\Demo1.csproj",
         "packagesPath": "C:\\Users\\cogdotnet1688\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\cogdotnet1688\\source\\repos\\Demo1\\Demo1\\obj\\",
+        "outputPath": "D:\\Training\\Demo1\\Demo1\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
