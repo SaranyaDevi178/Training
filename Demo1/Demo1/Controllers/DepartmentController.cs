@@ -28,13 +28,25 @@ namespace Demo1.Controllers
         public IActionResult PostsDeprecord([FromBody] Department deps)
         
         {
-            dep.Add(new Department 
+            bool IsExist= dep.Any(z=>z.DepartmentId.Equals(deps.DepartmentId));
+            if(IsExist)
             {
-                DepartmentId = deps.DepartmentId,
-                DepartmentName = deps.DepartmentName
+                return BadRequest("Incorrect");
+            }
+            try
+            {
+                
+                dep.Add(new Department
+                {
+                    DepartmentId = deps.DepartmentId,
+                    DepartmentName = deps.DepartmentName
 
-            });
-
+                });
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(ex.Message);
+            }
             return Ok("Added");
         }
 
@@ -81,7 +93,7 @@ namespace Demo1.Controllers
             }
             catch (Exception ex)
             {
-                Console.WriteLine(ex.Message);
+                return BadRequest(ex.Message);
             }
             return Ok("modified");
 
