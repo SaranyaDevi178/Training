@@ -1,5 +1,7 @@
 ﻿using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using System.Security.Cryptography;
+using System.Xml.Linq;
 
 namespace Demo1.Controllers
 {
@@ -8,17 +10,29 @@ namespace Demo1.Controllers
     public class StudentsController : ControllerBase
     {
         public static  List<Students> stud = new List<Students>();
-
+       
+         public static List<Department> dep = DepartmentController.dep;
+       
 
         [HttpPost]
-        public IActionResult PostStudrecord(int id,string name, string department)
+        public IActionResult PostStudrecord(int id,string name,int depeid)
         {
-            stud.Add(new Students
+            bool IsExist = dep.Any(x => x.DepartmentId == depeid);
+            if (IsExist)
             {
-                StudId = id,
-               StudName = name,
-                Department = department
-            });
+                stud.Add(new Students
+                {
+                    StudId = id,
+                    StudName = name,
+                    Depid = depeid
+
+                });
+
+            }
+            else
+            {
+                return BadRequest("Incorrect data");
+            }
             return Ok("Added");
         }
 
@@ -31,7 +45,7 @@ namespace Demo1.Controllers
         public IActionResult delete(int id)
         {
             bool IsExist = stud.Contains(stud.Find(studs => studs.StudId.Equals(id)));
-            if (IsExist == true)
+            if (IsExist)
             {
                 stud.Remove(stud.Find(studs => studs.StudId.Equals(id)));
                 return Ok("deleted");
@@ -43,13 +57,17 @@ namespace Demo1.Controllers
         }
 
         [HttpPut]
-        public IActionResult ModifingRecord(int id,  string name,string department)
+        public IActionResult ModifingRecord(int id,  string name)
         {
             bool IsExist = stud.Contains(stud.Find(studs => studs.StudId.Equals(id)));
 
+            if(!IsExist)
+            {
+                return BadRequest("incorrect data");
+            }
             try
             {
-                if (IsExist==true)
+                if (IsExist)
                 {
                    
                     stud.Find (studs => studs.StudId.Equals(id)).StudName = name;
@@ -57,10 +75,7 @@ namespace Demo1.Controllers
                     return Ok("modified");
                 }
                 
-                else
-                {
-                    return BadRequest("Incorrect data");
-                }
+                
             }
             catch (Exception ex)
             {
