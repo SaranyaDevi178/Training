@@ -1,0 +1,90 @@
+{
+  "Routes": [
+    {
+      "DownstreamPathTemplate": "/WeatherForecast",
+      "DownstreamSchema": "https",
+      "DownstreamHttpMethod": "GET",
+      "RouteIsCaseSensitive": false,
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": "7151"
+        }
+      ],
+      "UpstreamPathTemplate": "/WeatherForecast/GetWeatherForecast",
+      "UpstreamHttpMethod": [ "Get" ]
+      //"AuthenticationOptions": {
+      //  "AuthenticationProviderKey": "GatewayAuthenticationKey",
+      //  "AllowedScopes": []
+      //}
+    },
+   // 7234
+    {
+
+      "DownstreamPathTemplate": "/api/values",
+      "DownstreamSchema": "https",
+      "DownstreamHttpMethod": "GET",
+      "RouteIsCaseSensitive": false,
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": "7234"
+        }
+      ],
+      "UpstreamPathTemplate": "/api/values/GetDate",
+      "UpstreamHttpMethod": [ "Get" ]
+      
+    },
+    {
+
+      "DownstreamPathTemplate": "/api/Validate",
+      "DownstreamSchema": "https",
+      "DownstreamHttpMethod": "POST",
+      "RouteIsCaseSensitive": false,
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": "7271"
+        }
+      ],
+      "UpstreamPathTemplate": "/api/Validate/PostData",
+      "UpstreamHttpMethod": [ "Post" ]
+
+    },
+    {
+
+      "DownstreamPathTemplate": "/api/Validate",
+      "DownstreamSchema": "https",
+      "DownstreamHttpMethod": "Get",
+      "RouteIsCaseSensitive": false,
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": "7271"
+        }
+      ],
+      "UpstreamPathTemplate": "/api/Validate/GetData",
+      "UpstreamHttpMethod": [ "Get" ]
+
+    },
+    {
+
+      "DownstreamPathTemplate": "/api/Validate",
+      "DownstreamSchema": "https",
+      "DownstreamHttpMethod": "Put",
+      "RouteIsCaseSensitive": false,
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": "7271"
+        }
+      ],
+      "UpstreamPathTemplate": "/api/Validate/PutData",
+      "UpstreamHttpMethod": [ "PUT" ]
+
+    }
+  ],
+      "GlobalConfiguration": {
+        "BaseUrl": "https://localhost:7183/"
+      }
+    }

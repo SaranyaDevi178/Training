@@ -7,6 +7,7 @@ namespace Demo1.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
+    [Produces("application/xml")]
     public class StudentsController : ControllerBase
     {
         public static  List<Students> stud = new List<Students>();

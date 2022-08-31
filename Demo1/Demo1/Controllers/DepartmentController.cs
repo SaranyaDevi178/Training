@@ -4,13 +4,16 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace Demo1.Controllers
 {
+    
     [Route("api/[controller]")]
     [ApiController]
+
+    [Produces("application/xml")]
     public class DepartmentController : ControllerBase
     {
         public static List<Department> dep = new List<Department>();
-        
 
+   
         [HttpPost]
         public IActionResult PostDeprecord(int did, string dname)
         {
