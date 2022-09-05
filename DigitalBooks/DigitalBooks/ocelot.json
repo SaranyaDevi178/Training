@@ -1,0 +1,76 @@
+{
+  "Routes": [
+    {
+      "DownstreamPathTemplate": "/api/Books",
+      "DownstreamSchema": "https",
+      "DownstreamHttpMethod": "GET",
+      "RouteIsCaseSensitive": false,
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": "7145"
+        }
+      ],
+      "UpstreamPathTemplate": "/api/Books/GetDetails",
+      "UpstreamHttpMethod": [ "Get" ]
+
+    },
+    {
+      "DownstreamPathTemplate": "/api/Books",
+      "DownstreamSchema": "https",
+      "DownstreamHttpMethod": "Post",
+      "RouteIsCaseSensitive": false,
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": "7145"
+        }
+      ],
+      "UpstreamPathTemplate": "/api/Books/postdetails",
+      "UpstreamHttpMethod": [ "Post" ]
+
+    },
+    {
+
+      "DownstreamPathTemplate": "/validate",
+      "DownstreamSchema": "https",
+      "DownstreamHttpMethod": "Post",
+      "RouteIsCaseSensitive": false,
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": "7077"
+        }
+      ],
+      "UpstreamPathTemplate": "/validate",
+      "UpstreamHttpMethod": [ "POST" ]
+
+    },
+
+    {
+
+      "DownstreamPathTemplate": "/api/UserTables",
+      "DownstreamSchema": "https",
+      "DownstreamHttpMethod": "GET",
+      "RouteIsCaseSensitive": false,
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": "7149"
+        }
+      ],
+      "UpstreamPathTemplate": "/api/UserTables/GetData",
+      "UpstreamHttpMethod": [ "Get" ]
+
+    }
+
+    //7012
+
+
+
+  ],
+  "GlobalConfiguration": {
+    "BaseUrl": "https://localhost:7012/"
+  }
+}
+
