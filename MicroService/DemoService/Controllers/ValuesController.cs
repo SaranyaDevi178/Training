@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Http;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
 namespace DemoService.Controllers
@@ -7,16 +8,17 @@ namespace DemoService.Controllers
 
     [Route("api/[controller]")]
     [ApiController]
+   [Authorize]
     public class ValuesController : ControllerBase
     {
-       
-        [HttpGet(Name = "GetDate")]
-       
-        public string GetDate()
+        [HttpGet]
+        public string GetToken()
         {
+
             return DateTime.Now.ToString();
         }
-
-
     }
+
+
 }
+

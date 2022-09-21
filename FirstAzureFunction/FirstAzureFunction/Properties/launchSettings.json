@@ -1,0 +1,9 @@
+{
+  "profiles": {
+    "FirstAzureFunction": {
+      "commandName": "Project",
+      "commandLineArgs": "--port 7297",
+      "launchBrowser": false
+    }
+  }
+}

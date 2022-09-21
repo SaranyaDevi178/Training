@@ -25,3 +25,11 @@ C:\Users\cogdotnet1688\source\repos\MicroService\UserService\obj\Debug\net6.0\re
 C:\Users\cogdotnet1688\source\repos\MicroService\UserService\obj\Debug\net6.0\UserService.pdb
 C:\Users\cogdotnet1688\source\repos\MicroService\UserService\obj\Debug\net6.0\UserService.genruntimeconfig.cache
 C:\Users\cogdotnet1688\source\repos\MicroService\UserService\obj\Debug\net6.0\ref\UserService.dll
+C:\Users\cogdotnet1688\source\repos\MicroService\UserService\bin\Debug\net6.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+C:\Users\cogdotnet1688\source\repos\MicroService\UserService\bin\Debug\net6.0\Microsoft.IdentityModel.Abstractions.dll
+C:\Users\cogdotnet1688\source\repos\MicroService\UserService\bin\Debug\net6.0\Microsoft.IdentityModel.JsonWebTokens.dll
+C:\Users\cogdotnet1688\source\repos\MicroService\UserService\bin\Debug\net6.0\Microsoft.IdentityModel.Logging.dll
+C:\Users\cogdotnet1688\source\repos\MicroService\UserService\bin\Debug\net6.0\Microsoft.IdentityModel.Protocols.dll
+C:\Users\cogdotnet1688\source\repos\MicroService\UserService\bin\Debug\net6.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+C:\Users\cogdotnet1688\source\repos\MicroService\UserService\bin\Debug\net6.0\Microsoft.IdentityModel.Tokens.dll
+C:\Users\cogdotnet1688\source\repos\MicroService\UserService\bin\Debug\net6.0\System.IdentityModel.Tokens.Jwt.dll

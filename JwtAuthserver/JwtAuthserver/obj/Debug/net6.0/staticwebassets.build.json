@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "/s6ZkCCEFcphjfuAMKh3cQPUngU9hqgADUn0SnhOO6w=",
+  "Source": "JwtAuthserver",
+  "BasePath": "_content/JwtAuthserver",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}
